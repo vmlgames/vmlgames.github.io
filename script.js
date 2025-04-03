@@ -1,4 +1,3 @@
-// Games data direct geïntegreerd
 const games = [
   {
     "title": "Fps",
@@ -8,11 +7,25 @@ const games = [
     "gameText": ""
   },
   {
+    "title": "Getting over it scratch",
+    "description": "de getting over it game in scratch nagebouwd.",
+    "image": "https://student-management-76.github.io/images/lesson-89.webp",
+    "gameUrl": "https://tinygusie2.github.io/getting-over-it/",
+    "gameText": ""
+  },
+  {
+    "title": "Moto X3M",
+    "description": "Moto X3M strand",
+    "image": "https://student-management-76.github.io/images/lesson-119.webp",
+    "gameUrl": "https://geography-20.github.io/repo1/lesson-119/",
+    "gameText": ""
+  },
+  {
     "title": "OVO",
     "description": "OVO",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSkQY_E3874zWBps_oztDMB45F1m_SO8wNxQ&s",
     "gameUrl": "https://phantomsummon.com/games/2024/77/ovo/index.html",
-    "gameText": "Welkom bij OVO! Spring en glijd door uitdagende levels vol obstakels. Gebruik je vaardigheden om alle levels te voltooien en probeer de beste tijd neer te zetten."
+    "gameText": ""
   },
   {
     "title": "GRANNY",
@@ -26,7 +39,7 @@ const games = [
     "description": "Snow rider 3D zoals je het kent.",
     "image": "https://lh3.googleusercontent.com/o7oMN1OjuBJTGdpiY54xX5p18Pkm4fafqnVb1iI48CG-JMC-cH9SPwsUVtzFc1uw4heJI-uphG4HAox33vL-3gcVKrE=s120",
     "gameUrl": "https://www.hoodamath.com/mobile/games/snow-rider-3d/game.html?nocheckorient=1",
-    "gameText": "Slee niet van de klif af hé"
+    "gameText": ""
   },
   {
     "title": "3 Panda's in japan",
@@ -117,20 +130,6 @@ const games = [
     "description": "De game van dezelfde maker van Drive mad!",
     "image": "https://play-lh.googleusercontent.com/JvL2ZG3TWaWUcmJyd8ttLz1A9FXq2MMHkx72KQTpu4RvXVYQSXI8iNiHiIZbofkj6A=s96-rw",
     "gameUrl": "https://geography-20.github.io/repo3/lesson-434/",
-    "gameText": ""
-  },
-  {
-    "title": "Getting over it scratch",
-    "description": "de getting over it game in scratch nagebouwd.",
-    "image": "https://student-management-76.github.io/images/lesson-89.webp",
-    "gameUrl": "https://tinygusie2.github.io/getting-over-it/",
-    "gameText": ""
-  },
-  {
-    "title": "Moto X3M",
-    "description": "Moto X3M strand",
-    "image": "https://student-management-76.github.io/images/lesson-119.webp",
-    "gameUrl": "https://geography-20.github.io/repo1/lesson-119/",
     "gameText": ""
   },
   {
