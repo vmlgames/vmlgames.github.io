@@ -21,6 +21,13 @@ const games = [
     "gameText": ""
   },
   {
+    "title": "Checkout Frenzy",
+    "description": "Checkout",
+    "image": "",
+    "gameUrl": "https://unblocked-games.s3.amazonaws.com/games/2025/unity/checkout-frenzy/index.html",
+    "gameText": ""
+  },
+  {
     "title": "OVO",
     "description": "OVO",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSkQY_E3874zWBps_oztDMB45F1m_SO8wNxQ&s",
