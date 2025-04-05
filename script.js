@@ -14,6 +14,13 @@ const games = [
     "gameText": ""
   },
   {
+    "title": "Rijder Multiplayer",
+    "description": "De multiplayer rijd-game die we speelden",
+    "image": "https://shots.codepen.io/username/pen/yvNGRN-800.jpg?version=1622161795",
+    "gameUrl": "https://vmlgames.end-gray.ts.net/",
+    "gameText": ""
+  },
+  {
     "title": "Moto X3M",
     "description": "Moto X3M strand",
     "image": "https://student-management-76.github.io/images/lesson-119.webp",
