@@ -21,24 +21,10 @@ const games = [
     "gameText": ""
   },
   {
-    "title": "Run 3",
-    "description": "De run 3 game",
-    "image": "",
-    "gameUrl": "https://vmlgames.github.io/run3.html",
-    "gameText": ""
-  },
-  {
     "title": "Moto X3M",
     "description": "Moto X3M strand",
     "image": "https://student-management-76.github.io/images/lesson-119.webp",
     "gameUrl": "https://geography-20.github.io/repo1/lesson-119/",
-    "gameText": ""
-  },
-  {
-    "title": "Smashy road wanted",
-    "description": "De mobiele game",
-    "image": "",
-    "gameUrl": "https://tinyplay.io/game/smashy-road/",
     "gameText": ""
   },
   {
