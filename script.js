@@ -35,10 +35,10 @@ const games = [
     "gameText": ""
   },
   {
-    "title": "Checkout Frenzy",
-    "description": "Checkout",
+    "title": "Smashy road wanted",
+    "description": "De mobiele game",
     "image": "",
-    "gameUrl": "https://unblocked-games.s3.amazonaws.com/games/2025/unity/checkout-frenzy/index.html",
+    "gameUrl": "https://tinyplay.io/game/smashy-road/",
     "gameText": ""
   },
   {
