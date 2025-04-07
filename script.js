@@ -166,13 +166,6 @@ const games = [
     "image": "https://student-management-76.github.io/images/lesson-339.webp",
     "gameUrl": "https://geography-20.github.io/repo2/lesson-339/",
     "gameText": ""
-  },
-  {
-    "title": "Polytrack",
-    "description": "Polytrack",
-    "image": "",
-    "gameUrl": "https://geography-lessons.github.io/Vafor_IT/polytrack/",
-    "gameText": ""
   }
 ];
 
