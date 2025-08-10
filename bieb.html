@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link rel="icon" href="https://www.google.com/favicon.ico" type="image/x-icon">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Google Sans & Google Sans Text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Google+Sans+Text:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Aangepaste stijlen voor een rustig donker thema */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Google Sans Text', sans-serif;
+            background-color: #111827; /* Zeer donkerblauw/grijs */
+            color: #9ca3af; /* Lichter grijs voor standaard tekst */
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Google Sans', sans-serif;
+            color: #f9fafb; /* Gebroken wit voor koppen */
+        }
+        .material-surface-card {
+            display: block;
+            background-color: #1f2937; /* Donkergrijs oppervlak */
+            border-radius: 1.5rem; /* Extra afgeronde hoeken */
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .material-surface-card:hover {
+            background-color: #374151; /* Iets lichter bij hover */
+            transform: translateY(-6px);
+        }
+        .accent-color {
+            color: #60a5fa; /* Zachtblauw als accent */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigatiebalk -->
+    <header class="p-4 sm:p-6 sticky top-0 bg-gray-900 bg-opacity-80 backdrop-blur-md z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-3">
+                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8 accent-color">
+                    <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z" clip-rule="evenodd" />
+                </svg>
+                <h1 class="text-2xl font-bold">VMLgames</h1>
+            </a>
+            <nav class="hidden md:flex space-x-6 text-gray-400 font-medium">
+                <a href="#" class="hover:text-white transition-colors">Home</a>
+                <a href="#" class="accent-color font-semibold">Games</a>
+                <a href="#" class="hover:text-white transition-colors">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Game Bibliotheek -->
+    <main class="container mx-auto px-6 py-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">Onze Games</h2>
+        
+        <!-- Grid voor de game kaarten -->
+        <div id="game-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <!-- Game kaarten worden hier door JavaScript ingevoegd -->
+        </div>
+    </main>
+
+    <!-- Game Modal/Overlay -->
+    <div id="game-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-95 z-50 flex flex-col p-4 sm:p-6">
+        <div class="w-full max-w-screen-2xl mx-auto flex-shrink-0 flex justify-between items-center mb-4">
+            <h3 id="game-title" class="text-xl font-bold text-white truncate"></h3>
+            <button onclick="closeGame()" class="text-white bg-gray-700 hover:bg-gray-600 rounded-full p-2 focus:outline-none transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <div class="w-full max-w-screen-2xl mx-auto flex-grow bg-black rounded-lg">
+            <iframe id="game-iframe" class="w-full h-full border-0 rounded-lg" src="about:blank" allowfullscreen></iframe>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-500 py-12 mt-16">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 VMLgames. Alle rechten voorbehouden.</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="#" class="hover:text-white transition-colors">Twitter</a>
+                <a href="#" class="hover:text-white transition-colors">YouTube</a>
+                <a href="#" class="hover:text-white transition-colors">Discord</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Array met alle game-data
+        const games = [
+          { "title": "Getting over it scratch", "description": "de getting over it game in scratch nagebouwd.", "image": "https://student-management-76.github.io/images/lesson-89.webp", "gameUrl": "https://scratch.mit.edu/projects/389464290/embed" },
+          { "title": "Moto X3M", "description": "Moto X3M strand", "image": "https://student-management-76.github.io/images/lesson-119.webp", "gameUrl": "https://geography-20.github.io/repo1/lesson-119/" },
+          { "title": "OVO", "description": "OVO", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSkQY_E3874zWBps_oztDMB45F1m_SO8wNxQ&s", "gameUrl": "https://phantomsummon.com/games/2024/77/ovo/index.html" },
+          { "title": "GRANNY", "description": "granny unblocked", "image": "https://play-lh.googleusercontent.com/yT_LBq_tyKeIDohKDsqN_Qt18jGIPUYIxY2C-1-E2YA9Qd60uZW08pua17qBmIiDPA=w480-h960-rw", "gameUrl": "https://www.yoosfuhl.com/game/granny/index.html" },
+          { "title": "Snow Rider 3D", "description": "Snow rider 3D zoals je het kent.", "image": "https://lh3.googleusercontent.com/o7oMN1OjuBJTGdpiY54xX5p18Pkm4fafqnVb1iI48CG-JMC-cH9SPwsUVtzFc1uw4heJI-uphG4HAox33vL-3gcVKrE=s120", "gameUrl": "https://www.hoodamath.com/mobile/games/snow-rider-3d/game.html?nocheckorient=1" },
+          { "title": "3 Panda's in japan", "description": "3 Pandas in japan", "image": "https://play-lh.googleusercontent.com/MjFwma-CeaRrpjP7vTgjRFhVJkpwgGhWlScUg56fA8AvEXPy8r5lQxjKcztxXC897G4=w240-h480-rw", "gameUrl": "https://geography-20.github.io/repo3/lesson-404/" },
+          { "title": "Aquapark slide", "description": "Glijd niet van de rand af!", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHDEzcOuWi9E25b8bcLNezrFL5ucdEvrmZMcEiXrcbKzR-3rDg_N2hjJI&usqp=CAE&s", "gameUrl": "https://geography-20.github.io/repo2/lesson-377/" },
+          { "title": "Bitcoin Clicker", "description": "Klik die bitcoin om rijk te worden!", "image": "https://geography-20.github.io/repo1/lesson-30/images/bitcoin-8bit.png", "gameUrl": "https://geography-20.github.io/repo1/lesson-30/" },
+          { "title": "Blumgi rocket", "description": "Blumgi rocket.", "image": "https://student-management-76.github.io/images/lesson-419.webp", "gameUrl": "https://geography-20.github.io/repo3/lesson-419/" },
+          { "title": "Cookie clicker", "description": "De originele cookie clicker.", "image": "https://geography-20.github.io/repo2/lesson-348/img/perfectCookie.png", "gameUrl": "https://geography-20.github.io/repo2/lesson-348/" },
+          { "title": "Big tower Tiny square", "description": "Een pixel game die een beetje lijkt op vex.", "image": "https://student-management-76.github.io/images/lesson-420.webp", "gameUrl": "https://geography-20.github.io/repo3/lesson-420/" },
+          { "title": "Bottle Flip", "description": "Bottle flip.", "image": "https://student-management-76.github.io/images/lesson-346.webp", "gameUrl": "https://geography-20.github.io/repo2/lesson-346/" },
+          { "title": "Crossy road space", "description": "Crossy road in de ruimte.", "image": "https://student-management-76.github.io/images/lesson-429.webp", "gameUrl": "https://geography-20.github.io/repo3/lesson-429/" },
+          { "title": "CircloO", "description": "CircloO", "image": "https://student-management-76.github.io/images/lesson-426.webp", "gameUrl": "https://geography-20.github.io/repo3/lesson-426/" },
+          { "title": "CircloO 2", "description": "CircloO 2", "image": "https://student-management-76.github.io/images/lesson-427.webp", "gameUrl": "https://geography-20.github.io/repo3/lesson-427/" },
+          { "title": "Drive mad", "description": "Drive mad unblocked", "image": "https://cdn-1.webcatalog.io/catalog/poki-drive-mad/poki-drive-mad-icon-filled-256.webp?v=1714778298617", "gameUrl": "https://geography-20.github.io/repo1/lesson-61/" },
+          { "title": "Fireboy Watergirl forest temple", "description": "Vuurjongen en Watermeisje", "image": "https://geography-20.github.io/repo1/lesson-76/assets/icon.jpeg", "gameUrl": "https://geography-20.github.io/repo1/lesson-76/" },
+          { "title": "Dino Bro's", "description": "De game van dezelfde maker van Drive mad!", "image": "https://play-lh.googleusercontent.com/JvL2ZG3TWaWUcmJyd8ttLz1A9FXq2MMHkx72KQTpu4RvXVYQSXI8iNiHiIZbofkj6A=s96-rw", "gameUrl": "https://geography-20.github.io/repo3/lesson-434/" },
+          { "title": "Moto X3M Pool Party", "description": "De pool party versie van X3M", "image": "https://student-management-76.github.io/images/lesson-123.webp", "gameUrl": "https://geography-20.github.io/repo1/lesson-123/" },
+          { "title": "Money Movers", "description": "2 Speler spel.", "image": "https://geography-20.github.io/repo3/lesson-461/assets/icon.jpeg", "gameUrl": "https://geography-20.github.io/repo3/lesson-461/" },
+          { "title": "Flappy bird", "description": "namaak flappy bird", "image": "https://upload.wikimedia.org/wikipedia/en/0/0a/Flappy_Bird_icon.png", "gameUrl": "https://geography-20.github.io/repo1/lesson-80/" },
+          { "title": "Vex 4", "description": "De originele vex 4", "image": "https://student-management-76.github.io/images/lesson-339.webp", "gameUrl": "https://geography-20.github.io/repo2/lesson-339/" }
+        ];
+
+        // DOM-elementen voor de modal
+        const gameGrid = document.getElementById('game-grid');
+        const gameModal = document.getElementById('game-modal');
+        const gameIframe = document.getElementById('game-iframe');
+        const gameTitleEl = document.getElementById('game-title');
+
+        // Functie om de game-modal te openen
+        const openGame = (url, title) => {
+            gameIframe.src = url;
+            gameTitleEl.textContent = title;
+            gameModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Voorkom scrollen van de achtergrond
+        };
+
+        // Functie om de game-modal te sluiten
+        const closeGame = () => {
+            gameModal.classList.add('hidden');
+            gameIframe.src = 'about:blank'; // Stop de game en maak het iframe leeg
+            document.body.style.overflow = 'auto'; // Sta scrollen weer toe
+        };
+        
+        // Loop door de games-array en maak voor elke game een kaart
+        games.forEach(game => {
+            // Maak de HTML voor de kaart
+            const cardHtml = `
+                <div onclick="openGame('${game.gameUrl}', '${game.title}')" class="material-surface-card group">
+                    <img 
+                        src="${game.image}" 
+                        alt="${game.title}" 
+                        class="w-full h-48 object-cover"
+                        onerror="this.onerror=null;this.src='https://placehold.co/400x300/1f2937/60a5fa?text=${encodeURIComponent(game.title)}';"
+                    >
+                    <div class="p-5">
+                        <h4 class="text-xl font-bold truncate">${game.title}</h4>
+                        <p class="mt-1 text-gray-400 text-sm">${game.description}</p>
+                    </div>
+                </div>
+            `;
+            // Voeg de kaart toe aan het grid
+            gameGrid.innerHTML += cardHtml;
+        });
+
+    </script>
+
+</body>
+</html>

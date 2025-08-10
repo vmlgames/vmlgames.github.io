@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link rel="icon" href="https://www.google.com/favicon.ico" type="image/x-icon">
+
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Google Sans & Google Sans Text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Google+Sans+Text:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Aangepaste stijlen voor een rustig donker thema */
+        body {
+            font-family: 'Google Sans Text', sans-serif;
+            background-color: #111827; /* Zeer donkerblauw/grijs */
+            color: #9ca3af; /* Lichter grijs voor standaard tekst */
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Google Sans', sans-serif;
+            color: #f9fafb; /* Gebroken wit voor koppen */
+        }
+        .material-surface {
+            background-color: #1f2937; /* Donkergrijs oppervlak */
+            border-radius: 1.5rem; /* Extra afgeronde hoeken */
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .material-surface:hover {
+            background-color: #374151; /* Iets lichter bij hover */
+            transform: translateY(-4px);
+        }
+        .material-button {
+            font-family: 'Google Sans', sans-serif;
+            font-weight: 500;
+            border-radius: 999px; /* Pilvormige knoppen */
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            padding: 0.75rem 1.75rem;
+        }
+        .material-button:hover {
+            transform: translateY(-2px);
+        }
+        .material-button-primary {
+            background-color: #374151; /* Gedempt grijsblauw */
+            color: #f9fafb;
+        }
+        .material-button-primary:hover {
+            background-color: #4b5563;
+        }
+        .accent-color {
+            color: #60a5fa; /* Zachtblauw als accent */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigatiebalk -->
+    <header class="p-4 sm:p-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8 accent-color">
+                    <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z" clip-rule="evenodd" />
+                </svg>
+                <h1 class="text-2xl font-bold">VMLgames</h1>
+            </div>
+            <nav class="hidden md:flex space-x-6 text-gray-400 font-medium">
+                <a href="#" class="hover:text-white transition-colors">Games</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hoofdsectie (Hero) -->
+    <main class="container mx-auto px-6 py-24 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl md:text-6xl font-bold leading-tight">
+                VMLgames
+            </h2>
+            <p class="mt-6 text-lg text-gray-400">
+                Begin hier.
+            </p>
+            <div class="mt-8">
+                <a href="bieb.html" class="material-button material-button-primary inline-block">
+                    Ontdek Onze Games
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Uitgelichte Games -->
+    <section id="games" class="py-20 bg-black bg-opacity-20 rounded-t-[3rem]">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-bold text-center mb-12">Uitgelichte Games</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Game Kaart 1 -->
+                <div class="material-surface overflow-hidden">
+                    <img src="https://placehold.co/600x400/1f2937/60a5fa?text=Cyber+Runner" alt="Afbeelding van het spel Cyber Runner" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold">Cyber Runner</h4>
+                        <p class="mt-2 text-gray-400">Race door neonverlichte straten in een futuristische metropool.</p>
+                    </div>
+                </div>
+
+                <!-- Game Kaart 2 -->
+                <div class="material-surface overflow-hidden">
+                    <img src="https://placehold.co/600x400/1f2937/34d399?text=Forest+Guardian" alt="Afbeelding van het spel Forest Guardian" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold">Forest Guardian</h4>
+                        <p class="mt-2 text-gray-400">Bescherm een mystiek woud tegen duistere krachten.</p>
+                    </div>
+                </div>
+
+                <!-- Game Kaart 3 -->
+                <div class="material-surface overflow-hidden">
+                    <img src="https://placehold.co/600x400/1f2937/f472b6?text=Starfall" alt="Afbeelding van het spel Starfall" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold">Starfall</h4>
+                        <p class="mt-2 text-gray-400">Verken de kosmos en bouw je eigen sterrenimperium.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-500 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 VMLgames. Alle rechten voorbehouden.</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="#" class="hover:text-white transition-colors">Twitter</a>
+                <a href="#" class="hover:text-white transition-colors">YouTube</a>
+                <a href="#" class="hover:text-white transition-colors">Discord</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
